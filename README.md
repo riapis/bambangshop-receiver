@@ -68,16 +68,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Commit: `Implement receive_notification function in Notification service.`
-    -   [ ] Commit: `Implement receive function in Notification controller.`
-    -   [ ] Commit: `Implement list_messages function in Notification service.`
-    -   [ ] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Commit: `Implement receive_notification function in Notification service.`
+    -   [x] Commit: `Implement receive function in Notification controller.`
+    -   [x] Commit: `Implement list_messages function in Notification service.`
+    -   [x] Commit: `Implement list function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -107,3 +107,33 @@ tetapi tetap memperkenalkan mekanisme locking seperti RwLock dan Mutex. Dengan d
 aman dan terkoordinasi.
 
 #### Reflection Subscriber-2
+1. Have you explored things outside of the steps in the tutorial, for example: src/lib.rs? If not, explain why you did 
+not do so. If yes, explain things that you have learned from those other parts of code.
+
+    Jawaban: Setelah saya mengerjakan modul ini, saya tertarik untuk memahami peran dari berbagai file yang tidak dijelaskan 
+secara rinci dalam tutorial. Misalnya, saya menemukan bahwa Cargo.toml bertindak sebagai file konfigurasi utama untuk 
+proyek Rust, memungkinkan pengelolaan dependensi, konfigurasi proyek, dan mendefinisikan metadata proyek dengan jelas. 
+Selain itu, ada juga Rocket.toml, yang terutama digunakan untuk konfigurasi spesifik Rocket framework, seperti pengaturan 
+port server, jumlah thread, dan tingkat log, tetapi dalam tutorial ini hanya digunakan untuk mengatur alamat IP dan port server. 
+Kemudian, lib.rs terbukti menjadi file yang kaya akan konfigurasi utama aplikasi, termasuk definisi variabel global, 
+struktur dasar konfigurasi aplikasi, penanganan error, dan penggunaan klien HTTP dalam konteks aplikasi Rust menggunakan 
+Rocket dan request.
+
+2. Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple 
+instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than 
+one instance of Main app, will it still be easy enough to add to the system?
+
+    Jawaban: Dari modul ini, saya menyadari bahwa Observer pattern dapat menjadi solusi yang praktis untuk menangani penambahan 
+subscriber yang lebih banyak. Hal ini terjadi karena adanya pemisahan jelas antara Publisher dan Observer, serta pengelolaan 
+pesan antara pemilik data dan subscriber. Meskipun demikian, menambahkan subscriber ke dalam sistem dapat meningkatkan 
+kompleksitas kode dan membuat prosesnya tidak segera sesederhana ketika hanya ada satu instance utama aplikasi. Meskipun 
+demikian, keuntungan yang didapat dari fleksibilitas dan skalabilitas dapat memberikan nilai tambah yang signifikan bagi aplikasi.
+
+3. Have you tried to make your own Tests, or enhance documentation on your Postman collection? If you have tried those features, 
+tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+
+    Jawaban: Saya baru - baru ini mulai mengeksplor kedua fitur tersebut di Postman. Meskipun saya belum benar-benar menguasai 
+syntax pembuatan script testing, namun saya berhasil mengimplementasikan beberapa script testing yang saya temukan dari internet. 
+Saya menemukan bahwa fitur ini sangat berguna dalam melakukan automated testing ketika saya menguji respons dari server. 
+Selain itu, saya juga mengeksplorasi fitur dokumentasi API di Postman dengan menambahkan deskripsi yang jelas pada setiap request. 
+Hal ini memungkinkan saya untuk melihat contoh body request yang diperlukan untuk memanggil setiap request dengan lebih efisien.
